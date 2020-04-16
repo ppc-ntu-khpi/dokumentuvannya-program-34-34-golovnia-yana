@@ -1,6 +1,13 @@
 package domain;
+/**
+ * Клас, що представляє співробітника
+ * @author Asus
+ */
 public class Employee {
-
+/**
+ * Вивід значень
+ * @return String
+ */
     @Override
     public String toString() {
         return "\nEmployee ID= " + ID + "\nName= " + name + "\nJobTitle= " + jobTitle + "\nLevel= " + level + "\nDept= " + dept;
@@ -11,7 +18,13 @@ public class Employee {
     private int ID;
     private int level;
     private String dept;
-
+/**
+ * Ініціалізує змінні
+ * @param name
+ * @param jobTitle
+ * @param level
+ * @param dept 
+ */
    // private static int employeesCount = 0;
 
     public Employee(String name, String jobTitle, int level, String dept) {
@@ -29,26 +42,40 @@ public class Employee {
         }
         this.dept = dept;
     }
-
+    /**
+     * Ініціалізує змінні
+     */
     public Employee() {
         ID = (int)(Math.random()*1000);
 //        if (ID > 10000) {
 //            throw new NumberFormatException("ERROR! Employee's ID cannot be greater than 10000. Employee is not created!");
 //        }
     }
-
+/**
+ * Метод, який встановлює значення
+ * @param job 
+ */
     public void setJobTitle(String job) {
         jobTitle = job;
     }
-
+/**
+ * Метод, який повертає назву роботи
+ * @return jobTitle
+ */
     public String getJobTitle() {
         return jobTitle;
     }
-
+/**
+ * Метод, який повертає ім'я
+ * @return name
+ */
     public String getName() {
         return name;
     }
-
+/**
+ * Метод, який встановлює значення рівня
+ * @param level 
+ */
     public void setLevel(int level) {
         switch (level) {
             case 1:
@@ -60,19 +87,31 @@ public class Employee {
                 this.level = 1;
         }
     }
-
+/**
+ * Метод, який повертає занчення рівня
+ * @return level
+ */
     public int getLevel() {
         return level;
     }
-
+/**
+ * Метод,який встановлює значення кафедри
+ * @return dept
+ */
     public String getDept() {
         return dept;
     }
-
+/**
+ * Метод, який встанвлює занчення кафедри
+ * @param dept 
+ */
     public void setDept(String dept) {
         this.dept = dept;
     }
-
+/**
+ * Метод, який встановлює занчення імені
+ * @param name 
+ */
     public void setName(String name) {
 //        boolean correctName = true;
 //        for (int i = 0; i < name.length(); i++) {
